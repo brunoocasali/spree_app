@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: xxx
+  username: xxx
+  password: xxx
+  pool: 5
+
+development:
+  <<: *default
+  database: spree_app_development
+
+test:
+  <<: *default
+  database: spree_app_test
