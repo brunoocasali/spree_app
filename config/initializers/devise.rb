@@ -1,0 +1,3 @@
+Devise.setup do |config|
+  config.secret_key = 'a7a0fd8d0cab62021ff563fe5980f807fa7020daeef203854b61054e7cd8a88ea1e942067bba81f317c467819ba83640d0111af138237948f30bc4501979a6b9'
+end
