@@ -98,4 +98,7 @@ Rails.application.configure do
     domain:         'heroku.com',
     enable_starttls_auto: true
   }
+
+  config.widget_host = "http://trustvox-staging-assets.s3.amazonaws.com"
+  config.widget_file = "/assets/widget.js"
 end
