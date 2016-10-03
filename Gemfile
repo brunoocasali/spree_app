@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'rails', '4.2.7'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -10,10 +12,17 @@ gem 'spree', '~> 3.1.0'
 gem 'spree_auth_devise', '~> 3.1.0'
 gem 'spree_gateway', '~> 3.1.0'
 
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-1-stable'
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+
 group :development, :test do
   gem 'pry-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
