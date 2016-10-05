@@ -7,7 +7,15 @@
     _trustvox.push(['_productPhotos', '<%= product_url(@product).html_safe %>']);
   </script>
 
+  <script type="text/javascript">
+    var _trustvox_shelf_rate = _trustvox_shelf_rate || [];
+     _trustvox_shelf_rate.push(['_storeId', '1']);
+     _trustvox_shelf_rate.push(['_productContainer', '.product-list']);
+     _trustvox_shelf_rate.push(['_watchSubtree', true]);
+  </script>
+
   <%= javascript_include_tag "//#{SpreeApp::Application.config.widget_host}#{SpreeApp::Application.config.widget_file}", async: true %>
+  <%= javascript_include_tag "//#{SpreeApp::Application.config.rate_widget_host}#{SpreeApp::Application.config.rate_widget_file}", async: true %>
 <% end %>
 
 <% @body_id = 'product-details' %>
@@ -27,11 +35,6 @@
           </div>
         </div>
 
-        <a href="#_trustvox_widget" style="color: #5B5B5B">
-          <div data-trustvox-product-code="<%= @product.id %>"> Pergunte e veja opiniões de quem já comprou.
-          </div>
-        </a>
-
         <div data-hook="product_properties">
           <%= render :partial => 'properties' %>
         </div>
@@ -46,6 +49,11 @@
       <div data-hook="product_right_part_wrap">
         <div id="product-description" data-hook="product_description">
           <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
+          <p>
+            <a class="product-list" href="#_trustvox_widget" data-trustvox-product-code="<%= @product.id %>" data-trustvox-display-rate-schema="true"></a>
+            <a href="#_trustvox_widget" style="text-decoration: none;"> Veja opiniões de quem já comprou. </a>
+            <br />
+          </p>
 
           <div class="well" itemprop="description" data-hook="description">
             <%= product_description(@product) %>
