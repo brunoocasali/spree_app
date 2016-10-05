@@ -6,7 +6,7 @@
      // _trustvox_shelf_rate.push(['_watchSubtree', true]);
   </script>
 
-  <%= javascript_include_tag "//#{SpreeApp::Application.config.rate_widget_host}#{SpreeApp::Application.config.rate_widget_file}", async: true %>
+  <%= javascript_include_tag "https://#{SpreeApp::Application.config.rate_widget_host}#{SpreeApp::Application.config.rate_widget_file}", async: true %>
 <% end %>
 
 <% content_for :head do %>

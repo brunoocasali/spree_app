@@ -99,9 +99,9 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  config.widget_host = '//trustvox-staging-assets.s3.amazonaws.com'
+  config.widget_host = 'trustvox-staging-assets.s3.amazonaws.com'
   config.widget_file = "/assets/widget.js"
 
-  config.rate_widget_host = '//s3-sa-east-1.amazonaws.com/trustvox-staging-rate-widget-js'
+  config.rate_widget_host = 's3-sa-east-1.amazonaws.com/trustvox-staging-rate-widget-js'
   config.rate_widget_file = '/widget.js'
 end
