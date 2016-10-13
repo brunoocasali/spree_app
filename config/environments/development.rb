@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.widget_host = "0.0.0.0:3010"
-  config.widget_file = "/assets/widget.js"
+  config.widget_file = "/widget.js"
 
   config.rate_widget_host = "0.0.0.0:3333"
   config.rate_widget_file = "/widget.js"

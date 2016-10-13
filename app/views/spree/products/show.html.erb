@@ -14,8 +14,8 @@
      _trustvox_shelf_rate.push(['_watchSubtree', true]);
   </script>
 
-  <%= javascript_include_tag "http://#{SpreeApp::Application.config.widget_host}#{SpreeApp::Application.config.widget_file}", async: true %>
-  <%= javascript_include_tag "http://#{SpreeApp::Application.config.rate_widget_host}#{SpreeApp::Application.config.rate_widget_file}", async: true %>
+  <%= javascript_include_tag "//#{SpreeApp::Application.config.widget_host}#{SpreeApp::Application.config.widget_file}", async: true %>
+  <%= javascript_include_tag "//#{SpreeApp::Application.config.rate_widget_host}#{SpreeApp::Application.config.rate_widget_file}", async: true %>
 <% end %>
 
 <% @body_id = 'product-details' %>
